@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block body %}
+<div class="container w-50" style="min-width:300px;max-width:500px">
+<h1 class="m-5 text-center">Create</h1>
+<form method='post'>{% csrf_token %}
+    {{ form|crispy }}
+    <input type='submit' value='Save' class='btn btn-success mx-auto'>
+    <input type='button' value='Cancel' class='btn btn-secondary mx-auto' onclick="location.href='{% url 'course_list' %}'">
+</form>
+</div>
+{% endblock %}
