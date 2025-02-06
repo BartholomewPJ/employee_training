@@ -21,4 +21,11 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT = BASE_DIR / 'collected_staticfiles'
+STATIC_ROOT = '/usr/share/nginx/html/static'
+
+EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+SENDGRID_API_KEY = env('SENDGRID_API_KEY')
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+SENDGRID_TRACK_CLICKS_PLAIN = False
+

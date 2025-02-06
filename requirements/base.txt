@@ -4,6 +4,4 @@ crispy-bootstrap5
 django-allauth
 django-extensions
 django-environ
-gunicorn
-psycopg2-binary
 
