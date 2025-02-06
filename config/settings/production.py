@@ -5,9 +5,7 @@ env = environ.Env()
 env.read_env('.env')
 
 SECRET_KEY = env('SECRET_KEY')
-
 DEBUG = False
-
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 DATABASES = {
